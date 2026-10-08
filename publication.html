@@ -4,13 +4,15 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Publications | Haryati Mahmod</title>
 
-
     <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
 
         * {
             margin: 0;
@@ -18,17 +20,10 @@
             box-sizing: border-box;
         }
 
-
         body {
-
             font-family: Arial, Helvetica, sans-serif;
-
             background: #f7f5f0;
-
             color: #333;
-
-            line-height: 1.7;
-
         }
 
 
@@ -37,231 +32,251 @@
         ========================= */
 
         nav {
-
             width: 100%;
-
             padding: 25px 8%;
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             background: #f7f5f0;
-
         }
-
 
         .logo {
-
             font-size: 22px;
-
             font-weight: bold;
-
             letter-spacing: 1px;
-
         }
-
 
         nav ul {
-
             list-style: none;
-
             display: flex;
-
             gap: 30px;
-
         }
-
 
         nav ul li a {
-
             text-decoration: none;
-
             color: #444;
-
             font-size: 15px;
-
         }
 
-
         nav ul li a:hover {
-
             color: #8a6f4d;
-
         }
 
 
         /* =========================
-           HEADER
+           PAGE HEADER
         ========================= */
 
         .page-header {
-
             text-align: center;
-
-            padding: 80px 8% 50px;
-
+            padding: 80px 8% 55px;
         }
-
 
         .page-header h4 {
-
             color: #8a6f4d;
-
-            font-size: 15px;
-
+            font-size: 14px;
             letter-spacing: 3px;
-
             text-transform: uppercase;
-
             margin-bottom: 15px;
-
         }
-
 
         .page-header h1 {
-
             font-size: 55px;
-
             color: #292929;
-
-            margin-bottom: 20px;
-
+            margin-bottom: 18px;
         }
 
-
         .page-header p {
-
             max-width: 650px;
-
             margin: auto;
-
             color: #666;
-
             font-size: 16px;
-
+            line-height: 1.7;
         }
 
 
         /* =========================
-           PUBLICATIONS
+           INSTAGRAM STYLE GRID
         ========================= */
 
-        .publications {
-
-            max-width: 1000px;
-
+        .publication-section {
+            max-width: 1150px;
             margin: auto;
-
-            padding: 30px 8% 90px;
-
+            padding: 20px 5% 100px;
         }
 
 
-        .publication-card {
+        .publication-grid {
 
-            background: white;
+            display: grid;
 
-            margin-bottom: 30px;
+            /* 3 COLUMNS */
+            grid-template-columns: repeat(3, 1fr);
 
-            padding: 35px;
-
-            border-radius: 18px;
-
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-
-            transition: 0.3s;
-
+            gap: 15px;
         }
 
 
-        .publication-card:hover {
+        /* =========================
+           PUBLICATION TILE
+        ========================= */
 
-            transform: translateY(-5px);
+        .publication-item {
 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+            position: relative;
 
+            aspect-ratio: 1 / 1;
+
+            overflow: hidden;
+
+            background: #e9e5dc;
+
+            cursor: pointer;
         }
 
 
-        .year {
+        /* Background / cover */
 
-            display: inline-block;
+        .publication-cover {
 
-            background: #efebe3;
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            padding: 30px;
+
+            transition: 0.4s;
+        }
+
+
+        .publication-year {
+
+            font-size: 14px;
+
+            letter-spacing: 2px;
 
             color: #8a6f4d;
 
-            padding: 6px 15px;
-
-            border-radius: 20px;
-
-            font-size: 13px;
-
             font-weight: bold;
-
-            margin-bottom: 18px;
-
         }
 
 
-        .publication-card h2 {
+        .publication-number {
 
-            font-size: 24px;
+            font-size: 70px;
+
+            font-weight: bold;
+
+            color: rgba(0,0,0,0.08);
+        }
+
+
+        .publication-cover h2 {
+
+            font-size: 22px;
+
+            line-height: 1.35;
+
+            color: #333;
+        }
+
+
+        /* =========================
+           HOVER OVERLAY
+        ========================= */
+
+        .publication-overlay {
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(40,40,40,0.94);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px;
+
+            opacity: 0;
+
+            transition: 0.35s;
+        }
+
+
+        .publication-item:hover .publication-overlay {
+            opacity: 1;
+        }
+
+
+        .publication-item:hover .publication-cover {
+            transform: scale(1.05);
+        }
+
+
+        .publication-overlay .year {
+
+            color: #d4b98c;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .publication-overlay h3 {
+
+            color: white;
+
+            font-size: 19px;
 
             line-height: 1.4;
 
             margin-bottom: 15px;
-
-            color: #292929;
-
         }
 
 
-        .author {
+        .publication-overlay p {
 
-            font-weight: bold;
+            color: #ccc;
 
-            margin-bottom: 8px;
+            font-size: 13px;
 
-        }
-
-
-        .journal {
-
-            color: #777;
-
-            font-size: 15px;
-
-            margin-bottom: 22px;
-
-        }
-
-
-        .description {
-
-            color: #666;
-
-            font-size: 15px;
+            line-height: 1.5;
 
             margin-bottom: 25px;
-
         }
 
 
         /* =========================
-           BUTTON
+           READ BUTTON
         ========================= */
 
         .read-button {
 
             display: inline-block;
 
-            padding: 12px 23px;
+            padding: 11px 22px;
 
-            background: #333;
+            border: 1px solid white;
 
             color: white;
 
@@ -269,35 +284,46 @@
 
             border-radius: 25px;
 
-            font-size: 14px;
+            font-size: 13px;
 
+            transition: 0.3s;
         }
 
 
         .read-button:hover {
 
-            background: #8a6f4d;
+            background: white;
 
+            color: #333;
         }
 
 
         /* =========================
-           COMING SOON
+           DIFFERENT TILE SHADES
         ========================= */
 
-        .coming-soon {
-
-            opacity: 0.75;
-
+        .tile-one {
+            background: #e8e1d5;
         }
 
+        .tile-two {
+            background: #dfe3dc;
+        }
 
-        .coming-soon .read-button {
+        .tile-three {
+            background: #e5ddd8;
+        }
 
-            background: #aaa;
+        .tile-four {
+            background: #e2dfd3;
+        }
 
-            pointer-events: none;
+        .tile-five {
+            background: #d9dfdd;
+        }
 
+        .tile-six {
+            background: #ebe4da;
         }
 
 
@@ -309,11 +335,25 @@
 
             text-align: center;
 
-            padding: 25px;
+            padding: 30px;
 
             font-size: 13px;
 
             color: #777;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .publication-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
 
         }
 
@@ -322,7 +362,7 @@
            MOBILE
         ========================= */
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
 
             nav {
 
@@ -332,10 +372,9 @@
 
             }
 
-
             nav ul {
 
-                gap: 15px;
+                gap: 12px;
 
                 flex-wrap: wrap;
 
@@ -343,6 +382,11 @@
 
             }
 
+            .page-header {
+
+                padding-top: 55px;
+
+            }
 
             .page-header h1 {
 
@@ -351,20 +395,69 @@
             }
 
 
-            .publication-card {
+            /* Instagram-like 2 columns */
 
-                padding: 25px;
+            .publication-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 5px;
 
             }
 
 
-            .publication-card h2 {
+            .publication-cover {
 
-                font-size: 20px;
+                padding: 15px;
+
+            }
+
+
+            .publication-cover h2 {
+
+                font-size: 14px;
+
+            }
+
+
+            .publication-number {
+
+                font-size: 40px;
+
+            }
+
+
+            .publication-overlay {
+
+                padding: 12px;
+
+            }
+
+
+            .publication-overlay h3 {
+
+                font-size: 13px;
+
+            }
+
+
+            .publication-overlay p {
+
+                display: none;
+
+            }
+
+
+            .read-button {
+
+                padding: 8px 13px;
+
+                font-size: 11px;
 
             }
 
         }
+
 
     </style>
 
@@ -374,222 +467,324 @@
 <body>
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-    <nav>
+<nav>
 
-        <div class="logo">
-            HARYATI MAHMOD
-        </div>
+    <div class="logo">
+        HARYATI MAHMOD
+    </div>
 
+    <ul>
 
-        <ul>
+        <li>
+            <a href="index.html">Welcome</a>
+        </li>
 
-            <li>
-                <a href="index.html">Welcome</a>
-            </li>
+        <li>
+            <a href="about.html">About Me</a>
+        </li>
 
-            <li>
-                <a href="about.html">About Me</a>
-            </li>
+        <li>
+            <a href="publication.html">Publication</a>
+        </li>
 
-            <li>
-                <a href="publication.html">Publication</a>
-            </li>
+        <li>
+            <a href="#">Innovation</a>
+        </li>
 
-            <li>
-                <a href="#">Innovation</a>
-            </li>
+        <li>
+            <a href="#">Resources</a>
+        </li>
 
-            <li>
-                <a href="#">Resources</a>
-            </li>
+    </ul>
 
-        </ul>
-
-    </nav>
-
-
-
-    <!-- =========================
-         PAGE HEADER
-    ========================= -->
-
-    <section class="page-header">
-
-        <h4>
-            Research & Writing
-        </h4>
-
-        <h1>
-            Publications
-        </h1>
-
-        <p>
-            A collection of my research, academic writing,
-            and scholarly contributions throughout my journey.
-        </p>
-
-    </section>
+</nav>
 
 
 
-    <!-- =========================
-         PUBLICATION LIST
-    ========================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
-    <section class="publications">
+<section class="page-header">
 
+    <h4>
+        Research · Writing · Knowledge
+    </h4>
 
-        <!-- 2024 -->
+    <h1>
+        Publications
+    </h1>
 
-        <div class="publication-card">
+    <p>
 
-            <span class="year">
-                2024
-            </span>
+        A collection of my research, academic writing,
+        and scholarly contributions.
 
+        Click on a publication to explore and read the work.
 
-            <h2>
-                Exploring TikTok as an Alternative Learning Platform:
-                Student Perceptions at Politeknik METrO Tasek Gelugor
-            </h2>
+    </p>
 
-
-            <p class="author">
-                Haryati Mahmod
-            </p>
-
-
-            <p class="journal">
-                Politeknik & Kolej Komuniti Journal of Life Long Learning
-                · Vol. 8 No. 2 · 2024
-            </p>
-
-
-            <p class="description">
-
-                This study explores students' perceptions of TikTok
-                as an alternative learning platform and examines
-                its potential to support student interest,
-                engagement, and learning.
-
-            </p>
-
-
-            <a
-                href="https://app.mypolycc.edu.my/journal/PKKJLLL/article/view/703"
-                target="_blank"
-                class="read-button">
-
-                Read Publication →
-
-            </a>
-
-        </div>
+</section>
 
 
 
-        <!-- 2023 - Publication 1 -->
+<!-- =========================
+     PUBLICATION GRID
+========================= -->
 
-        <div class="publication-card coming-soon">
-
-            <span class="year">
-                2023
-            </span>
+<section class="publication-section">
 
 
-            <h2>
-                Your 2023 Publication Title
-            </h2>
+    <div class="publication-grid">
 
 
-            <p class="author">
-                Haryati Mahmod
-            </p>
+
+        <!-- =====================
+             PUBLICATION 01
+        ====================== -->
+
+        <div class="publication-item tile-one">
 
 
-            <p class="journal">
-                Journal / Conference Name · 2023
-            </p>
+            <div class="publication-cover">
+
+                <span class="publication-year">
+                    2024
+                </span>
 
 
-            <p class="description">
-
-                Publication details will be added here.
-
-            </p>
+                <div class="publication-number">
+                    01
+                </div>
 
 
-            <a
-                href="#"
-                class="read-button">
+                <h2>
 
-                Read Publication →
+                    Exploring TikTok as an
+                    Alternative Learning Platform
 
-            </a>
+                </h2>
+
+            </div>
+
+
+
+            <!-- Hover -->
+
+            <div class="publication-overlay">
+
+
+                <span class="year">
+                    2024 · JOURNAL ARTICLE
+                </span>
+
+
+                <h3>
+
+                    Exploring TikTok as an Alternative
+                    Learning Platform: Student Perceptions
+                    at Politeknik METrO Tasek Gelugor
+
+                </h3>
+
+
+                <p>
+
+                    Haryati Mahmod
+
+                    <br>
+
+                    Politeknik & Kolej Komuniti
+                    Journal of Life Long Learning
+
+                </p>
+
+
+                <a
+                    href="https://app.mypolycc.edu.my/journal/PKKJLLL/article/view/703"
+                    target="_blank"
+                    class="read-button">
+
+                    Read Publication →
+
+                </a>
+
+
+            </div>
+
 
         </div>
 
 
 
-        <!-- 2023 - Publication 2 -->
 
-        <div class="publication-card coming-soon">
+        <!-- =====================
+             PUBLICATION 02
+        ====================== -->
 
-            <span class="year">
-                2023
-            </span>
-
-
-            <h2>
-                Your 2023 Publication Title
-            </h2>
+        <div class="publication-item tile-two">
 
 
-            <p class="author">
-                Haryati Mahmod
-            </p>
+            <div class="publication-cover">
 
 
-            <p class="journal">
-                Journal / Conference Name · 2023
-            </p>
+                <span class="publication-year">
+                    2023
+                </span>
 
 
-            <p class="description">
-
-                Publication details will be added here.
-
-            </p>
+                <div class="publication-number">
+                    02
+                </div>
 
 
-            <a
-                href="#"
-                class="read-button">
+                <h2>
 
-                Read Publication →
+                    Publication Title
 
-            </a>
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="publication-overlay">
+
+
+                <span class="year">
+                    2023 · PUBLICATION
+                </span>
+
+
+                <h3>
+
+                    Your 2023 Publication Title
+
+                </h3>
+
+
+                <p>
+
+                    Haryati Mahmod
+
+                    <br>
+
+                    Journal / Conference
+
+                </p>
+
+
+                <a
+                    href="#"
+                    class="read-button">
+
+                    Read Publication →
+
+                </a>
+
+
+            </div>
+
 
         </div>
 
 
-    </section>
+
+
+        <!-- =====================
+             PUBLICATION 03
+        ====================== -->
+
+        <div class="publication-item tile-three">
+
+
+            <div class="publication-cover">
+
+
+                <span class="publication-year">
+                    2023
+                </span>
+
+
+                <div class="publication-number">
+                    03
+                </div>
+
+
+                <h2>
+
+                    Publication Title
+
+                </h2>
+
+
+            </div>
 
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+            <div class="publication-overlay">
 
-    <footer>
 
-        © 2026 Haryati Mahmod · Academic Research Portfolio
+                <span class="year">
+                    2023 · PUBLICATION
+                </span>
 
-    </footer>
+
+                <h3>
+
+                    Your Second 2023 Publication Title
+
+                </h3>
+
+
+                <p>
+
+                    Haryati Mahmod
+
+                    <br>
+
+                    Journal / Conference
+
+                </p>
+
+
+                <a
+                    href="#"
+                    class="read-button">
+
+                    Read Publication →
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Haryati Mahmod · Academic Research Portfolio
+
+</footer>
 
 
 </body>
