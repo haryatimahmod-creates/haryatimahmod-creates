@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PhDiaries | Haryati Mahmod</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #faf9f6;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e8e5df;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #9b7b5a;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 90px 20px 70px;
+    background: linear-gradient(
+        180deg,
+        #f4eee7 0%,
+        #faf9f6 100%
+    );
+}
+
+.hero .small-title {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9b7b5a;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #302d2a;
+}
+
+.hero h2 {
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: auto;
+    color: #666;
+    font-size: 16px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    max-width: 760px;
+    margin: 60px auto 30px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.intro p {
+    margin-bottom: 18px;
+    color: #555;
+}
+
+.intro .highlight {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f2ece4;
+    border-left: 4px solid #b39470;
+    font-style: italic;
+    color: #5c5147;
+}
+
+/* =========================
+   DIARY SECTION
+========================= */
+
+.diary-container {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 0 25px;
+}
+
+.year-title {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9b7b5a;
+    margin-bottom: 60px;
+}
+
+/* Timeline */
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #d9d1c8;
+    transform: translateX(-50%);
+}
+
+.diary-entry {
+    position: relative;
+    width: 50%;
+    padding: 0 45px 70px;
+}
+
+.diary-entry:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.diary-entry:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.diary-dot {
+    position: absolute;
+    top: 5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #b39470;
+    border: 3px solid #faf9f6;
+    box-shadow: 0 0 0 1px #b39470;
+}
+
+.diary-entry:nth-child(odd) .diary-dot {
+    right: -7px;
+}
+
+.diary-entry:nth-child(even) .diary-dot {
+    left: -7px;
+}
+
+.date {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #9b7b5a;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.diary-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.diary-entry h3 {
+    font-size: 25px;
+    font-weight: normal;
+    color: #302d2a;
+    margin-bottom: 10px;
+}
+
+.diary-entry p {
+    color: #6d6862;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #9b7b5a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.read-more:hover {
+    color: #6f543b;
+}
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing {
+    max-width: 700px;
+    margin: 20px auto 90px;
+    padding: 45px 30px;
+    text-align: center;
+    background: #f3eee8;
+}
+
+.closing h2 {
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: #39332d;
+}
+
+.closing p {
+    color: #68615a;
+    font-style: italic;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #302d2a;
+    color: #ddd;
+    font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 65px 20px 50px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .diary-entry,
+    .diary-entry:nth-child(odd),
+    .diary-entry:nth-child(even) {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding: 0 10px 55px 45px;
+    }
+
+    .diary-entry:nth-child(odd) .diary-dot,
+    .diary-entry:nth-child(even) .diary-dot {
+        left: 4px;
+        right: auto;
+    }
+
+    .diary-entry h3 {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        Haryati Mahmod
+    </div>
+
+    <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="publication.html">Publication</a></li>
+        <li><a href="innovation.html">Innovation</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="phdiaries.html">PhDiaries</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="small-title">
+        A personal research journal
+    </div>
+
+    <h1>PhDiaries</h1>
+
+    <h2>A journey of becoming a researcher.</h2>
+
+    <p>
+        Research, reflections, lessons, struggles,
+        discoveries and little wins along the way.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="intro">
+
+    <p>
+        Not everything in a PhD journey belongs in a thesis.
+    </p>
+
+    <p>
+        Some things are learned through uncertainty,
+        failed attempts, small breakthroughs, late nights,
+        unexpected ideas, and moments of simply wondering,
+        <em>"Am I doing this right?"</em>
+    </p>
+
+    <p>
+        <strong>PhDiaries</strong> is my space to document those moments —
+        the research, the learning, the struggles, the discoveries,
+        and the little wins along the way.
+    </p>
+
+    <div class="highlight">
+        A personal record of becoming a researcher,
+        one day at a time.
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DIARY TIMELINE
+========================= -->
+
+<section class="diary-container">
+
+    <div class="year-title">
+        2026 · The Beginning
+    </div>
+
+
+    <div class="timeline">
+
+
+        <!-- ENTRY 1 -->
+
+        <article class="diary-entry">
+
+            <div class="diary-dot"></div>
+
+            <div class="date">
+                October 2026
+            </div>
+
+            <div class="diary-icon">
+                🌱
+            </div>
+
+            <h3>
+                Starting My PhD
+            </h3>
+
+            <p>
+                The decision that opened a completely new
+                chapter in my academic journey.
+            </p>
+
+            <a href="#" class="read-more">
+                Read story →
+            </a>
+
+        </article>
+
+
+        <!-- ENTRY 2 -->
+
+        <article class="diary-entry">
+
+            <div class="diary-dot"></div>
+
+            <div class="date">
+                October 2026
+            </div>
+
+            <div class="diary-icon">
+                🔎
+            </div>
+
+            <h3>
+                What Exactly Is a Research Gap?
+            </h3>
+
+            <p>
+                The day I finally started to understand
+                what researchers actually mean by "the gap".
+            </p>
+
+            <a href="#" class="read-more">
+                Read story →
+            </a>
+
+        </article>
+
+
+        <!-- ENTRY 3 -->
+
+        <article class="diary-entry">
+
+            <div class="diary-dot"></div>
+
+            <div class="date">
+                October 2026
+            </div>
+
+            <div class="diary-icon">
+                📚
+            </div>
+
+            <h3>
+                My Relationship With Literature Review
+            </h3>
+
+            <p>
+                Reading paper after paper and slowly learning
+                how to see patterns, arguments and gaps.
+            </p>
+
+            <a href="#" class="read-more">
+                Read story →
+            </a>
+
+        </article>
+
+
+        <!-- ENTRY 4 -->
+
+        <article class="diary-entry">
+
+            <div class="diary-dot"></div>
+
+            <div class="date">
+                Coming Soon
+            </div>
+
+            <div class="diary-icon">
+                🎮
+            </div>
+
+            <h3>
+                Why I Chose VR
+            </h3>
+
+            <p>
+                From my Multimedia background to immersive
+                learning and the research questions that brought
+                me here.
+            </p>
+
+            <a href="#" class="read-more">
+                Coming soon →
+            </a>
+
+        </article>
+
+
+        <!-- ENTRY 5 -->
+
+        <article class="diary-entry">
+
+            <div class="diary-dot"></div>
+
+            <div class="date">
+                Coming Soon
+            </div>
+
+            <div class="diary-icon">
+                💡
+            </div>
+
+            <h3>
+                One Research Idea Becomes a Thesis
+            </h3>
+
+            <p>
+                How a simple idea slowly becomes a research
+                problem, a research gap and eventually a study.
+            </p>
+
+            <a href="#" class="read-more">
+                Coming soon →
+            </a>
+
+        </article>
+
+
+        <!-- ENTRY 6 -->
+
+        <article class="diary-entry">
+
+            <div class="diary-dot"></div>
+
+            <div class="date">
+                Coming Soon
+            </div>
+
+            <div class="diary-icon">
+                ✨
+            </div>
+
+            <h3>
+                Little Wins Matter
+            </h3>
+
+            <p>
+                Today I understood something that I didn't
+                understand yesterday. Maybe that is progress.
+            </p>
+
+            <a href="#" class="read-more">
+                Coming soon →
+            </a>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLOSING
+========================= -->
+
+<section class="closing">
+
+    <h2>
+        This is not a story about having everything figured out.
+    </h2>
+
+    <p>
+        It is a story about learning, questioning,
+        creating, and continuing.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Haryati Mahmod · PhDiaries
+
+</footer>
+
+
+</body>
+</html>
