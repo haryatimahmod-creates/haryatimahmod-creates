@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CPU QUEST | Computer Architecture</title>
+
+    <style>
+
+        /* =========================
+           GENERAL PAGE
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1020;
+            color: white;
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           WELCOME SECTION
+        ========================= */
+
+        .welcome {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+
+            background:
+                radial-gradient(circle at center,
+                #243b72 0%,
+                #11182f 45%,
+                #070b16 100%);
+        }
+
+
+        /* =========================
+           SMALL TOP LABEL
+        ========================= */
+
+        .label {
+            font-size: 14px;
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            opacity: 0.75;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           MAIN TITLE
+        ========================= */
+
+        h1 {
+            font-size: clamp(50px, 10vw, 100px);
+
+            letter-spacing: 8px;
+
+            margin-bottom: 15px;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           SUBTITLE
+        ========================= */
+
+        .subtitle {
+            font-size: 24px;
+
+            margin-bottom: 15px;
+
+            font-weight: 500;
+        }
+
+
+        /* =========================
+           DESCRIPTION
+        ========================= */
+
+        .description {
+            max-width: 650px;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            opacity: 0.8;
+
+            margin-bottom: 40px;
+        }
+
+
+        /* =========================
+           START BUTTON
+        ========================= */
+
+        .start-button {
+
+            display: inline-block;
+
+            padding: 16px 38px;
+
+            border: none;
+
+            border-radius: 50px;
+
+            background: white;
+
+            color: #11182f;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            cursor: pointer;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+
+        .start-button:hover {
+
+            transform: scale(1.05);
+
+            background: #e7ecff;
+        }
+
+
+        /* =========================
+           CPU PROCESS
+        ========================= */
+
+        .process {
+
+            display: flex;
+
+            gap: 30px;
+
+            margin-top: 60px;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+        }
+
+
+        .process-item {
+
+            width: 120px;
+
+            padding: 15px;
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            border-radius: 15px;
+
+            background: rgba(255,255,255,0.05);
+
+            backdrop-filter: blur(10px);
+        }
+
+
+        .process-icon {
+
+            font-size: 25px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .process-name {
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+
+            position: absolute;
+
+            bottom: 20px;
+
+            font-size: 12px;
+
+            opacity: 0.45;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .welcome {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 48px;
+
+                letter-spacing: 4px;
+            }
+
+            .subtitle {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 15px;
+            }
+
+            .process {
+                gap: 10px;
+            }
+
+            .process-item {
+                width: 100px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         WELCOME PAGE
+    ========================= -->
+
+    <section class="welcome">
+
+
+        <div class="label">
+            Interactive Learning Experience
+        </div>
+
+
+        <h1>
+            CPU QUEST
+        </h1>
+
+
+        <div class="subtitle">
+            Computer Architecture
+        </div>
+
+
+        <p class="description">
+
+            Enter the world of the CPU and discover
+            how instructions travel through the computer.
+
+            Explore, learn, and complete your mission
+            through the fundamental CPU cycle.
+
+        </p>
+
+
+        <!-- START BUTTON -->
+
+        <a href="#" class="start-button">
+
+            START JOURNEY →
+
+        </a>
+
+
+        <!-- CPU PROCESS -->
+
+        <div class="process">
+
+
+            <div class="process-item">
+
+                <div class="process-icon">
+                    ⚡
+                </div>
+
+                <div class="process-name">
+                    Fetch
+                </div>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-icon">
+                    🧠
+                </div>
+
+                <div class="process-name">
+                    Decode
+                </div>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-icon">
+                    🚀
+                </div>
+
+                <div class="process-name">
+                    Execute
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer">
+
+            PhD Research Project · Computer Architecture
+
+        </div>
+
+
+    </section>
+
+
+</body>
+
+</html>
