@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Publications | Haryati Mahmod</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #f7f5f0;
+
+            color: #333;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+
+            width: 100%;
+
+            padding: 25px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: #f7f5f0;
+
+        }
+
+
+        .logo {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        nav ul {
+
+            list-style: none;
+
+            display: flex;
+
+            gap: 30px;
+
+        }
+
+
+        nav ul li a {
+
+            text-decoration: none;
+
+            color: #444;
+
+            font-size: 15px;
+
+        }
+
+
+        nav ul li a:hover {
+
+            color: #8a6f4d;
+
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .page-header {
+
+            text-align: center;
+
+            padding: 80px 8% 50px;
+
+        }
+
+
+        .page-header h4 {
+
+            color: #8a6f4d;
+
+            font-size: 15px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .page-header h1 {
+
+            font-size: 55px;
+
+            color: #292929;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .page-header p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #666;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =========================
+           PUBLICATIONS
+        ========================= */
+
+        .publications {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding: 30px 8% 90px;
+
+        }
+
+
+        .publication-card {
+
+            background: white;
+
+            margin-bottom: 30px;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+            transition: 0.3s;
+
+        }
+
+
+        .publication-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+
+        }
+
+
+        .year {
+
+            display: inline-block;
+
+            background: #efebe3;
+
+            color: #8a6f4d;
+
+            padding: 6px 15px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .publication-card h2 {
+
+            font-size: 24px;
+
+            line-height: 1.4;
+
+            margin-bottom: 15px;
+
+            color: #292929;
+
+        }
+
+
+        .author {
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .journal {
+
+            color: #777;
+
+            font-size: 15px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .description {
+
+            color: #666;
+
+            font-size: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .read-button {
+
+            display: inline-block;
+
+            padding: 12px 23px;
+
+            background: #333;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 25px;
+
+            font-size: 14px;
+
+        }
+
+
+        .read-button:hover {
+
+            background: #8a6f4d;
+
+        }
+
+
+        /* =========================
+           COMING SOON
+        ========================= */
+
+        .coming-soon {
+
+            opacity: 0.75;
+
+        }
+
+
+        .coming-soon .read-button {
+
+            background: #aaa;
+
+            pointer-events: none;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 13px;
+
+            color: #777;
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+            }
+
+
+            nav ul {
+
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+
+            .page-header h1 {
+
+                font-size: 40px;
+
+            }
+
+
+            .publication-card {
+
+                padding: 25px;
+
+            }
+
+
+            .publication-card h2 {
+
+                font-size: 20px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="logo">
+            HARYATI MAHMOD
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="index.html">Welcome</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Me</a>
+            </li>
+
+            <li>
+                <a href="publication.html">Publication</a>
+            </li>
+
+            <li>
+                <a href="#">Innovation</a>
+            </li>
+
+            <li>
+                <a href="#">Resources</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================= -->
+
+    <section class="page-header">
+
+        <h4>
+            Research & Writing
+        </h4>
+
+        <h1>
+            Publications
+        </h1>
+
+        <p>
+            A collection of my research, academic writing,
+            and scholarly contributions throughout my journey.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         PUBLICATION LIST
+    ========================= -->
+
+    <section class="publications">
+
+
+        <!-- 2024 -->
+
+        <div class="publication-card">
+
+            <span class="year">
+                2024
+            </span>
+
+
+            <h2>
+                Exploring TikTok as an Alternative Learning Platform:
+                Student Perceptions at Politeknik METrO Tasek Gelugor
+            </h2>
+
+
+            <p class="author">
+                Haryati Mahmod
+            </p>
+
+
+            <p class="journal">
+                Politeknik & Kolej Komuniti Journal of Life Long Learning
+                · Vol. 8 No. 2 · 2024
+            </p>
+
+
+            <p class="description">
+
+                This study explores students' perceptions of TikTok
+                as an alternative learning platform and examines
+                its potential to support student interest,
+                engagement, and learning.
+
+            </p>
+
+
+            <a
+                href="https://app.mypolycc.edu.my/journal/PKKJLLL/article/view/703"
+                target="_blank"
+                class="read-button">
+
+                Read Publication →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- 2023 - Publication 1 -->
+
+        <div class="publication-card coming-soon">
+
+            <span class="year">
+                2023
+            </span>
+
+
+            <h2>
+                Your 2023 Publication Title
+            </h2>
+
+
+            <p class="author">
+                Haryati Mahmod
+            </p>
+
+
+            <p class="journal">
+                Journal / Conference Name · 2023
+            </p>
+
+
+            <p class="description">
+
+                Publication details will be added here.
+
+            </p>
+
+
+            <a
+                href="#"
+                class="read-button">
+
+                Read Publication →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- 2023 - Publication 2 -->
+
+        <div class="publication-card coming-soon">
+
+            <span class="year">
+                2023
+            </span>
+
+
+            <h2>
+                Your 2023 Publication Title
+            </h2>
+
+
+            <p class="author">
+                Haryati Mahmod
+            </p>
+
+
+            <p class="journal">
+                Journal / Conference Name · 2023
+            </p>
+
+
+            <p class="description">
+
+                Publication details will be added here.
+
+            </p>
+
+
+            <a
+                href="#"
+                class="read-button">
+
+                Read Publication →
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 Haryati Mahmod · Academic Research Portfolio
+
+    </footer>
+
+
+</body>
+
+</html>
