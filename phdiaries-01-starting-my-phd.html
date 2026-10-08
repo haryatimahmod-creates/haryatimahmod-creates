@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PhDiaries 01 | Starting My PhD | Haryati Mahmod</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #faf9f6;
+    color: #37332f;
+    line-height: 1.85;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e8e3dc;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3c3732;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #66605a;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #9a7957;
+}
+
+/* =========================
+   ARTICLE HEADER
+========================= */
+
+.article-header {
+    max-width: 850px;
+    margin: auto;
+    padding: 90px 25px 65px;
+    text-align: center;
+}
+
+.series {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a0805e;
+    margin-bottom: 18px;
+}
+
+.article-header h1 {
+    font-size: 52px;
+    font-weight: normal;
+    color: #302c28;
+    margin-bottom: 12px;
+}
+
+.article-header .subtitle {
+    font-size: 21px;
+    font-style: italic;
+    color: #81786f;
+    margin-bottom: 25px;
+}
+
+.article-date {
+    font-size: 13px;
+    color: #9a9189;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   ARTICLE
+========================= */
+
+.article {
+    max-width: 760px;
+    margin: auto;
+    padding: 0 25px 80px;
+}
+
+.article p {
+    font-size: 17px;
+    color: #504a45;
+    margin-bottom: 25px;
+}
+
+.article strong {
+    color: #332e29;
+}
+
+.article em {
+    color: #71665c;
+}
+
+.article h2 {
+    font-size: 31px;
+    font-weight: normal;
+    color: #39332e;
+    margin: 70px 0 25px;
+}
+
+.article h3 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 35px 0 15px;
+}
+
+/* =========================
+   SPECIAL TEXT
+========================= */
+
+.big-word {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 35px 0;
+    color: #8e6e4e;
+}
+
+.quote {
+    margin: 40px 0;
+    padding: 25px 30px;
+    background: #f2ece5;
+    border-left: 4px solid #b59673;
+    font-size: 20px;
+    font-style: italic;
+    color: #62574d;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.emoji-break {
+    text-align: center;
+    font-size: 28px;
+    margin: 45px 0;
+}
+
+/* =========================
+   STORY BOX
+========================= */
+
+.story-box {
+    background: #f5f0ea;
+    padding: 35px;
+    margin: 45px 0;
+    border-radius: 3px;
+}
+
+.story-box p {
+    margin-bottom: 12px;
+}
+
+/* =========================
+   COMPUTER STORY
+========================= */
+
+.computer-section {
+    margin-top: 75px;
+}
+
+.computer-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.computer-title .emoji {
+    font-size: 45px;
+}
+
+.computer-title h2 {
+    margin-top: 10px;
+}
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final-message {
+    margin-top: 80px;
+    padding: 45px 30px;
+    background: #eee7df;
+    text-align: center;
+}
+
+.final-message h2 {
+    margin-top: 0;
+    font-size: 29px;
+}
+
+.final-message p {
+    font-size: 16px;
+}
+
+.motto {
+    margin-top: 30px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #8b6c4d;
+    font-weight: bold;
+}
+
+/* =========================
+   BACK TO DIARIES
+========================= */
+
+.back-link {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.back-link a {
+    text-decoration: none;
+    color: #947453;
+    font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #302c28;
+    color: #d9d4ce;
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .article-header {
+        padding: 65px 20px 50px;
+    }
+
+    .article-header h1 {
+        font-size: 40px;
+    }
+
+    .article-header .subtitle {
+        font-size: 18px;
+    }
+
+    .article {
+        padding: 0 22px 60px;
+    }
+
+    .article p {
+        font-size: 16px;
+    }
+
+    .article h2 {
+        font-size: 27px;
+    }
+
+    .quote {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .story-box {
+        padding: 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        Haryati Mahmod
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="index.html">Welcome</a>
+        </li>
+
+        <li>
+            <a href="about.html">About Me</a>
+        </li>
+
+        <li>
+            <a href="publication.html">Publication</a>
+        </li>
+
+        <li>
+            <a href="innovation.html">Innovation</a>
+        </li>
+
+        <li>
+            <a href="resources.html">Resources</a>
+        </li>
+
+        <li>
+            <a href="phdiaries.html">PhDiaries</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+     ARTICLE HEADER
+========================= -->
+
+<header class="article-header">
+
+    <div class="series">
+        PhDiaries · Series 01
+    </div>
+
+    <h1>
+        Starting My PhD
+    </h1>
+
+    <div class="subtitle">
+        The girl who once hated computers.
+    </div>
+
+    <div class="article-date">
+        October 2026 · Haryati Mahmod
+    </div>
+
+</header>
+
+
+<!-- =========================
+     ARTICLE CONTENT
+========================= -->
+
+<main class="article">
+
+
+    <p>
+        I've always wanted to learn.
+    </p>
+
+    <p>
+        Maybe since I was 20, I've had this little dream of getting
+        as much education as I possibly could. I just wanted to know
+        more, learn more, and see how far I could go.
+    </p>
+
+    <p>
+        But honestly, my academic journey was not exactly...
+        <em>on schedule.</em> 😂
+    </p>
+
+    <p>
+        I started my Diploma at 21.
+        Then came my Degree.
+        I was 30 when I started my Master's.
+    </p>
+
+    <div class="big-word">
+        Yes, 30.
+    </div>
+
+    <p>
+        I know. Late. 😅
+    </p>
+
+    <p>
+        But strangely, I never really felt left behind.
+    </p>
+
+    <p>
+        Maybe because I learned that life doesn't come with a fixed
+        timeline. Some people start early. Some start later. Some take
+        a few detours before they find their way.
+    </p>
+
+    <p>
+        I was simply on my own timeline.
+    </p>
+
+    <p>
+        And Alhamdulillah, I was blessed to achieve the dreams
+        I once prayed for.
+    </p>
+
+
+    <div class="quote">
+        "Life doesn't come with a fixed timeline."
+    </div>
+
+
+    <p>
+        After completing my Master's in 2018, I actually wanted
+        to continue straight into a PhD.
+    </p>
+
+    <p>
+        I thought,
+        <em>"Okay, Master's done. PhD next."</em>
+    </p>
+
+    <p>
+        Simple, right?
+    </p>
+
+    <p>
+        Well... not quite.
+    </p>
+
+    <p>
+        Life happened.
+    </p>
+
+    <p>
+        Plans changed. Responsibilities came. There were things
+        I had to put first. And slowly, that PhD dream was placed
+        somewhere in the corner of my heart.
+    </p>
+
+    <p>
+        Sometimes I wondered,
+        <em>"Will I ever get to do it?"</em>
+    </p>
+
+    <p>
+        And maybe that was the hardest part.
+    </p>
+
+    <p>
+        Not knowing when.
+    </p>
+
+    <p>
+        But I never completely let go of the dream.
+    </p>
+
+
+    <div class="emoji-break">
+        🌱
+    </div>
+
+
+    <p>
+        And now, Alhamdulillah...
+    </p>
+
+    <div class="big-word">
+        I'm finally here.
+    </div>
+
+    <p>
+        Starting my PhD.
+    </p>
+
+    <p>
+        It feels exciting.
+    </p>
+
+    <p>
+        It feels scary.
+    </p>
+
+    <p>
+        And honestly, it feels a little emotional too.
+    </p>
+
+    <p>
+        Because this is something I wanted for a very long time.
+    </p>
+
+    <div class="story-box">
+
+        <p>
+            So, if you're reading this, please send a little
+            <em>doa</em> for me.
+        </p>
+
+        <p>
+            Pray that I'll have the strength, patience, health
+            and discipline to finish this journey on time.
+        </p>
+
+        <p>
+            And most importantly, I hope whatever I learn along
+            the way can eventually be given back to the students
+            I serve.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         COMPUTER STORY
+    ========================= -->
+
+    <section class="computer-section">
+
+        <div class="computer-title">
+
+            <div class="emoji">
+                💻
+            </div>
+
+            <h2>
+                But here's the funny part...
+            </h2>
+
+        </div>
+
+
+        <p>
+            Back in 2007, I was <strong>not</strong> someone
+            who loved technology.
+        </p>
+
+        <p>
+            In fact...
+            <strong>I HATED computers.</strong> 😂
+        </p>
+
+        <p>
+            When I was choosing a diploma programme,
+            my thinking was very simple:
+        </p>
+
+
+        <div class="quote">
+
+            "Okayyyyy... let's choose something that
+            DOESN'T have the word 'computer' in it."
+
+        </div>
+
+
+        <p class="center-text">
+            So I picked...
+        </p>
+
+
+        <div class="big-word">
+            MULTIMEDIA.
+        </div>
+
+
+        <p class="center-text">
+            Damnnnn. 🤣
+        </p>
+
+        <p>
+            I was so clueless.
+        </p>
+
+        <p>
+            My very first class was
+            <strong>C++ programming.</strong>
+        </p>
+
+        <p>
+            C++. ME.
+        </p>
+
+        <p>
+            A girl who barely knew how to switch on a computer.
+        </p>
+
+        <p>
+            And now my lecturer was asking me to code:
+        </p>
+
+
+        <div class="big-word">
+            Hello World.
+        </div>
+
+
+        <p class="center-text">
+            I was crying inside. 😭
+        </p>
+
+
+        <div class="story-box">
+
+            <p>
+                At one point, I had to call my best friend
+                and ask her to create an email account for me
+                because...
+            </p>
+
+            <p>
+                <em>"What is email?"</em> 😂
+            </p>
+
+        </div>
+
+
+        <p>
+            Looking back, it is actually hilarious.
+        </p>
+
+        <p>
+            But at that time?
+        </p>
+
+        <p>
+            I was terrified.
+        </p>
+
+        <p>
+            I didn't know what I was doing.
+        </p>
+
+        <p>
+            I didn't think I was good at technology.
+        </p>
+
+        <p>
+            I didn't think this was where I belonged.
+        </p>
+
+        <p>
+            And somehow, that clueless girl kept going.
+        </p>
+
+        <p>
+            One class became another.
+        </p>
+
+        <p>
+            One assignment became another.
+        </p>
+
+        <p>
+            One semester became another.
+        </p>
+
+        <p>
+            And eventually, Multimedia became part of who I am.
+        </p>
+
+        <p>
+            Then came technology.
+        </p>
+
+        <p>
+            Then education.
+        </p>
+
+        <p>
+            Then research.
+        </p>
+
+
+        <div class="big-word">
+            And now... Virtual Reality.
+        </div>
+
+
+        <p>
+            The girl who once tried to avoid the word
+            <em>computer</em> is now doing a PhD exploring
+            technology and learning.
+        </p>
+
+        <div class="quote">
+            Life is funny like that.
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY I SHARE
+    ========================= -->
+
+    <section>
+
+        <h2>
+            Maybe this is why I want to share this journey.
+        </h2>
+
+
+        <p>
+            Because I know what it feels like to start from zero.
+        </p>
+
+        <p>
+            To feel late.
+        </p>
+
+        <p>
+            To feel clueless.
+        </p>
+
+        <p>
+            To wonder if you are good enough.
+        </p>
+
+        <p>
+            To watch other people move ahead while you are still
+            trying to figure things out.
+        </p>
+
+        <p>
+            I know what it feels like to have a dream,
+            put it aside, and wonder if you will ever get
+            another chance.
+        </p>
+
+
+        <div class="quote">
+
+            "Being late does not mean you have lost."
+
+        </div>
+
+
+        <p>
+            But I also learned something.
+        </p>
+
+        <p>
+            <strong>
+                Being late does not mean you have lost.
+            </strong>
+        </p>
+
+        <p>
+            Starting from zero does not mean you cannot
+            become good at something.
+        </p>
+
+        <p>
+            And taking a longer route does not make your
+            journey less meaningful.
+        </p>
+
+        <p>
+            Sometimes, the path we didn't plan becomes
+            the path that shapes us the most.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         THE BEGINNING
+    ========================= -->
+
+    <section>
+
+        <h2>
+            So this is my beginning.
+        </h2>
+
+        <p>
+            My <strong>PhDiaries.</strong>
+        </p>
+
+        <p>
+            I want to share the good days, the confusing days,
+            the little wins, the failures, the things I learn,
+            and probably a few moments where I question my
+            life choices. 😂
+        </p>
+
+        <p>
+            If you're someone who feels like you're starting
+            from zero, I hope you find a little hope here.
+        </p>
+
+        <p>
+            You don't have to have everything figured out.
+        </p>
+
+        <div class="big-word">
+            You just have to start.
+        </div>
+
+        <p class="center-text">
+            Keep learning.
+        </p>
+
+        <p class="center-text">
+            Keep exploring.
+        </p>
+
+        <p class="center-text">
+            Keep going.
+        </p>
+
+
+        <div class="final-message">
+
+            <h2>
+                Because one day...
+            </h2>
+
+            <p>
+                You might look back at the person who was
+                once so scared and clueless...
+            </p>
+
+            <p>
+                and realise,
+            </p>
+
+            <div class="big-word">
+                she actually made it.
+            </div>
+
+            <div class="motto">
+                Learn. Explore. Impact.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BACK LINK
+    ========================= -->
+
+    <div class="back-link">
+
+        <a href="phdiaries.html">
+            ← Back to PhDiaries
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Haryati Mahmod · PhDiaries
+
+</footer>
+
+
+</body>
+</html>
