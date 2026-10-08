@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Resources | Haryati Mahmod</title>
+
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #f7f5f0;
+
+            color: #333;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+
+            width: 100%;
+
+            padding: 25px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: #f7f5f0;
+
+        }
+
+
+        .logo {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        nav ul {
+
+            list-style: none;
+
+            display: flex;
+
+            gap: 30px;
+
+        }
+
+
+        nav ul li a {
+
+            text-decoration: none;
+
+            color: #444;
+
+            font-size: 15px;
+
+        }
+
+
+        nav ul li a:hover {
+
+            color: #8a6f4d;
+
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .page-header {
+
+            text-align: center;
+
+            padding: 75px 8% 45px;
+
+        }
+
+
+        .page-header h4 {
+
+            color: #8a6f4d;
+
+            font-size: 14px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .page-header h1 {
+
+            font-size: 55px;
+
+            color: #292929;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .page-header p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #666;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =========================
+           CATEGORY
+        ========================= */
+
+        .resource-section {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 30px 5% 80px;
+
+        }
+
+
+        .category-title {
+
+            margin-top: 35px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .category-title h2 {
+
+            font-size: 25px;
+
+            color: #292929;
+
+        }
+
+
+        .category-title p {
+
+            color: #777;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================
+           RESOURCE GRID
+        ========================= */
+
+        .resource-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        /* =========================
+           RESOURCE CARD
+        ========================= */
+
+        .resource-card {
+
+            position: relative;
+
+            min-height: 280px;
+
+            padding: 30px;
+
+            background: white;
+
+            border-radius: 18px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            transition: 0.3s;
+
+        }
+
+
+        .resource-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+
+        }
+
+
+        /* =========================
+           ICON
+        ========================= */
+
+        .resource-icon {
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* =========================
+           LABEL
+        ========================= */
+
+        .resource-label {
+
+            display: inline-block;
+
+            width: fit-content;
+
+            padding: 5px 12px;
+
+            background: #efebe3;
+
+            color: #8a6f4d;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* =========================
+           CARD TEXT
+        ========================= */
+
+        .resource-card h3 {
+
+            font-size: 21px;
+
+            line-height: 1.35;
+
+            margin-bottom: 12px;
+
+            color: #292929;
+
+        }
+
+
+        .resource-card p {
+
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .resource-button {
+
+            display: inline-block;
+
+            width: fit-content;
+
+            margin-top: 25px;
+
+            padding: 10px 20px;
+
+            background: #333;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 25px;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .resource-button:hover {
+
+            background: #8a6f4d;
+
+        }
+
+
+        /* =========================
+           COMING SOON
+        ========================= */
+
+        .coming-soon {
+
+            background: #ebe8e1;
+
+        }
+
+
+        .coming-soon .resource-button {
+
+            background: #aaa;
+
+        }
+
+
+        /* =========================
+           RESOURCE NOTE
+        ========================= */
+
+        .sharing-note {
+
+            margin-top: 60px;
+
+            padding: 35px;
+
+            background: #efebe3;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+        }
+
+
+        .sharing-note h2 {
+
+            margin-bottom: 12px;
+
+            font-size: 25px;
+
+        }
+
+
+        .sharing-note p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #666;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 30px;
+
+            font-size: 13px;
+
+            color: #777;
+
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .resource-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+            }
+
+
+            nav ul {
+
+                gap: 12px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+
+            .page-header h1 {
+
+                font-size: 40px;
+
+            }
+
+
+            .resource-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .resource-card {
+
+                min-height: 250px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        HARYATI MAHMOD
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="index.html">Welcome</a>
+        </li>
+
+        <li>
+            <a href="about.html">About Me</a>
+        </li>
+
+        <li>
+            <a href="publication.html">Publication</a>
+        </li>
+
+        <li>
+            <a href="#">Innovation</a>
+        </li>
+
+        <li>
+            <a href="resources.html">Resources</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<section class="page-header">
+
+    <h4>
+        Learn · Organise · Create
+    </h4>
+
+
+    <h1>
+        Research Resources
+    </h1>
+
+
+    <p>
+
+        A growing collection of research tools,
+        templates, prompts, notes, and practical
+        resources that may help make the research
+        journey a little easier.
+
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     RESOURCE CONTENT
+========================= -->
+
+<section class="resource-section">
+
+
+
+    <!-- =====================
+         RESEARCH TOOLS
+    ====================== -->
+
+    <div class="category-title">
+
+        <h2>
+            📊 Research Tools
+        </h2>
+
+        <p>
+            Templates and tools to help organise your research.
+        </p>
+
+    </div>
+
+
+
+    <div class="resource-grid">
+
+
+
+        <!-- TICK MATRIX -->
+
+        <div class="resource-card">
+
+            <div>
+
+                <div class="resource-icon">
+                    📊
+                </div>
+
+                <span class="resource-label">
+                    RESEARCH TOOL
+                </span>
+
+                <h3>
+                    Tick Matrix
+                </h3>
+
+                <p>
+
+                    A practical matrix for organising,
+                    tracking, and reviewing research
+                    literature.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://docs.google.com/spreadsheets/d/1yamoJssUJn29BBcSpT786QZuUBex_m5BAnFSoLEV3eQ/edit?usp=sharing"
+                target="_blank"
+                class="resource-button">
+
+                Open Resource →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- LITERATURE REVIEW -->
+
+        <div class="resource-card">
+
+            <div>
+
+                <div class="resource-icon">
+                    📚
+                </div>
+
+                <span class="resource-label">
+                    TEMPLATE
+                </span>
+
+                <h3>
+                    Literature Review Matrix
+                </h3>
+
+                <p>
+
+                    A structured template to organise
+                    articles, themes, methods, findings,
+                    and research gaps.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://docs.google.com/spreadsheets/d/12Kg-TVNMAHelGnNb4071Xd53PnjlMs4_HtdJpbJlsDg/edit?usp=sharing"
+                target="_blank"
+                class="resource-button">
+
+                Open Template →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- PLACEHOLDER -->
+
+        <div class="resource-card coming-soon">
+
+            <div>
+
+                <div class="resource-icon">
+                    🗂️
+                </div>
+
+                <span class="resource-label">
+                    COMING SOON
+                </span>
+
+                <h3>
+                    Research Planning Template
+                </h3>
+
+                <p>
+
+                    A future resource for organising
+                    research tasks, milestones,
+                    and progress.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="#"
+                class="resource-button">
+
+                Coming Soon
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================
+         PROMPTS
+    ====================== -->
+
+    <div class="category-title">
+
+        <h2>
+            ✍️ Research Prompts
+        </h2>
+
+        <p>
+            Prompts to help think, write, question, and reflect.
+        </p>
+
+    </div>
+
+
+
+    <div class="resource-grid">
+
+
+
+        <div class="resource-card">
+
+            <div>
+
+                <div class="resource-icon">
+                    💡
+                </div>
+
+                <span class="resource-label">
+                    AI PROMPTS
+                </span>
+
+                <h3>
+                    Literature Review Prompts
+                </h3>
+
+                <p>
+
+                    Prompts for analysing papers,
+                    identifying themes, comparing studies,
+                    and finding research gaps.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="#"
+                class="resource-button">
+
+                Explore Prompts →
+
+            </a>
+
+        </div>
+
+
+
+        <div class="resource-card">
+
+            <div>
+
+                <div class="resource-icon">
+                    🔎
+                </div>
+
+                <span class="resource-label">
+                    AI PROMPTS
+                </span>
+
+                <h3>
+                    Research Gap Prompts
+                </h3>
+
+                <p>
+
+                    Questions and prompts to help
+                    move from "what has been studied?"
+                    to "what still needs to be studied?"
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="#"
+                class="resource-button">
+
+                Explore Prompts →
+
+            </a>
+
+        </div>
+
+
+
+        <div class="resource-card">
+
+            <div>
+
+                <div class="resource-icon">
+                    ✍️
+                </div>
+
+                <span class="resource-label">
+                    AI PROMPTS
+                </span>
+
+                <h3>
+                    Academic Writing Prompts
+                </h3>
+
+                <p>
+
+                    Useful prompts for improving
+                    academic paragraphs, arguments,
+                    synthesis, and critical writing.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="#"
+                class="resource-button">
+
+                Explore Prompts →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================
+         RESEARCH NOTES
+    ====================== -->
+
+    <div class="category-title">
+
+        <h2>
+            📝 Research Notes
+        </h2>
+
+        <p>
+            Simple explanations of things I learn along the way.
+        </p>
+
+    </div>
+
+
+
+    <div class="resource-grid">
+
+
+
+        <div class="resource-card">
+
+            <div>
+
+                <div class="resource-icon">
+                    🧠
+                </div>
+
+                <span class="resource-label">
+                    RESEARCH NOTES
+                </span>
+
+                <h3>
+                    Understanding Research Gaps
+                </h3>
+
+                <p>
+
+                    What is a research gap?
+                    Why does it matter?
+                    And how can we identify one?
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="#"
+                class="resource-button">
+
+                Read Notes →
+
+            </a>
+
+        </div>
+
+
+
+        <div class="resource-card">
+
+            <div>
+
+                <div class="resource-icon">
+                    📖
+                </div>
+
+                <span class="resource-label">
+                    RESEARCH NOTES
+                </span>
+
+                <h3>
+                    How to Read a Research Paper
+                </h3>
+
+                <p>
+
+                    A simple approach to reading
+                    academic papers without getting
+                    overwhelmed.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="#"
+                class="resource-button">
+
+                Read Notes →
+
+            </a>
+
+        </div>
+
+
+
+        <div class="resource-card">
+
+            <div>
+
+                <div class="resource-icon">
+                    🎓
+                </div>
+
+                <span class="resource-label">
+                    RESEARCH NOTES
+                </span>
+
+                <h3>
+                    Starting a PhD Journey
+                </h3>
+
+                <p>
+
+                    Reflections and practical lessons
+                    from the journey of becoming
+                    a researcher.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="#"
+                class="resource-button">
+
+                Read Notes →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================
+         CLOSING
+    ====================== -->
+
+    <div class="sharing-note">
+
+        <h2>
+            Research is better when we share.
+        </h2>
+
+        <p>
+
+            These resources are created and collected
+            as part of my own learning journey.
+            I hope they can save someone a little time,
+            make research feel less overwhelming,
+            or simply inspire a new idea.
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Haryati Mahmod · Academic Research Portfolio
+
+</footer>
+
+
+</body>
+
+</html>
