@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me | Haryati Mahmod</title>
+
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #f7f5f0;
+
+            color: #333;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+
+            width: 100%;
+
+            padding: 25px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: #f7f5f0;
+
+        }
+
+
+        .logo {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        nav ul {
+
+            list-style: none;
+
+            display: flex;
+
+            gap: 30px;
+
+        }
+
+
+        nav ul li a {
+
+            text-decoration: none;
+
+            color: #444;
+
+            font-size: 15px;
+
+        }
+
+
+        nav ul li a:hover {
+
+            color: #8a6f4d;
+
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        .about {
+
+            min-height: 85vh;
+
+            padding: 70px 8%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .about-container {
+
+            max-width: 1100px;
+
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: 0.8fr 1.2fr;
+
+            gap: 80px;
+
+            align-items: center;
+
+        }
+
+
+        /* =========================
+           PHOTO
+        ========================= */
+
+        .photo-section {
+
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+
+        .photo-frame {
+
+            width: 360px;
+
+            background: white;
+
+            padding: 15px;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+
+            transform: rotate(-2deg);
+
+        }
+
+
+        .photo-frame img {
+
+            width: 100%;
+
+            display: block;
+
+        }
+
+
+        .photo-caption {
+
+            text-align: center;
+
+            padding: 15px 5px 5px;
+
+            font-family: cursive;
+
+            font-size: 20px;
+
+            color: #555;
+
+        }
+
+
+        /* =========================
+           TEXT
+        ========================= */
+
+        .about-text h4 {
+
+            color: #8a6f4d;
+
+            font-size: 16px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .about-text h1 {
+
+            font-size: 52px;
+
+            line-height: 1.1;
+
+            margin-bottom: 25px;
+
+            color: #292929;
+
+        }
+
+
+        .about-text h1 span {
+
+            color: #8a6f4d;
+
+        }
+
+
+        .about-text p {
+
+            font-size: 16px;
+
+            color: #555;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .highlight {
+
+            font-weight: bold;
+
+            color: #333;
+
+        }
+
+
+        /* =========================
+           CLOSING MESSAGE
+        ========================= */
+
+        .closing {
+
+            margin-top: 30px;
+
+            padding: 25px;
+
+            border-left: 4px solid #8a6f4d;
+
+            background: #efebe3;
+
+        }
+
+
+        .closing p {
+
+            margin-bottom: 0;
+
+            font-style: italic;
+
+            color: #444;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 13px;
+
+            color: #777;
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+            }
+
+
+            nav ul {
+
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+
+            .about {
+
+                padding: 50px 7%;
+
+            }
+
+
+            .about-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+
+            }
+
+
+            .photo-frame {
+
+                width: 300px;
+
+            }
+
+
+            .about-text {
+
+                text-align: center;
+
+            }
+
+
+            .about-text h1 {
+
+                font-size: 40px;
+
+            }
+
+
+            .closing {
+
+                text-align: left;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="logo">
+            HARYATI MAHMOD
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="index.html">Welcome</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Me</a>
+            </li>
+
+            <li>
+                <a href="#">Publication</a>
+            </li>
+
+            <li>
+                <a href="#">Innovation</a>
+            </li>
+
+            <li>
+                <a href="#">Resources</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         ABOUT ME
+    ========================= -->
+
+    <section class="about">
+
+
+        <div class="about-container">
+
+
+            <!-- PHOTO -->
+
+            <div class="photo-section">
+
+                <div class="photo-frame">
+
+                    <img src="images/haryati.jpg"
+                         alt="Haryati Mahmod">
+
+                    <div class="photo-caption">
+                        Haryati M.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TEXT -->
+
+            <div class="about-text">
+
+
+                <h4>
+                    A Little About Me
+                </h4>
+
+
+                <h1>
+                    Hi, I'm <span>Haryati.</span>
+                </h1>
+
+
+                <p>
+                    A PhD student, educator, researcher,
+                    and lifelong learner.
+                </p>
+
+
+                <p>
+
+                    I'm currently pursuing my PhD at
+                    <span class="highlight">UTeM</span>,
+                    with an interest in
+                    <span class="highlight">
+                    Multimedia, Virtual Reality,
+                    and meaningful technology-enhanced learning.
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    This space is where I share my academic
+                    journey, ideas, reflections, useful prompts,
+                    and things I discover along the way.
+
+                </p>
+
+
+                <p>
+
+                    More than just documenting the journey,
+                    I hope this website can be a space for
+                    <span class="highlight">
+                    engagement, knowledge sharing,
+                    and meaningful outcomes
+                    </span>
+
+                    — where ideas can be explored, shared,
+                    and transformed into something useful.
+
+                </p>
+
+
+
+                <!-- CLOSING -->
+
+                <div class="closing">
+
+                    <p>
+
+                        Thank you for being here.
+
+                        <br><br>
+
+                        <strong>
+                        Let's learn, share, and create
+                        meaningful things together.
+                        </strong>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Haryati Mahmod · Academic Research Portfolio
+
+    </footer>
+
+
+</body>
+
+</html>
